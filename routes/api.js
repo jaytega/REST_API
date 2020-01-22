@@ -20,7 +20,7 @@ router.post('/', function(req, res){
     console.log(req.body);
     res.send({type:'POST-REQUEST',
               name: req.body.name,
-              rank: req.body.rank});
+              job: req.body.job});
 });
 
 //put is for updating existing data in the DB
