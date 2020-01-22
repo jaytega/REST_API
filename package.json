@@ -1,0 +1,27 @@
+{
+  "name": "rest_api",
+  "version": "1.0.0",
+  "description": "REST API proj1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaytega/REST_API.git"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "project"
+  ],
+  "author": "Jason Ortega (guided by thenetninja.co.uk)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaytega/REST_API/issues"
+  },
+  "homepage": "https://github.com/jaytega/REST_API#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
