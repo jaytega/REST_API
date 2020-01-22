@@ -16,7 +16,11 @@ router.get('/', function(req, res){
 
 //post is for adding to the DB
 router.post('/', function(req, res){
-    res.send({type:'POST-REQUEST'});
+  //req.body is from bodyParser
+    console.log(req.body);
+    res.send({type:'POST-REQUEST',
+              name: req.body.name,
+              rank: req.body.rank});
 });
 
 //put is for updating existing data in the DB

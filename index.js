@@ -1,15 +1,23 @@
 //after express is installed, we must require it as a module
 const express = require('express');
-//import routes
-const routes = require('./routes/api');
+
+const bodyParser = require('body-parser');
 
 //run express constructor and const assign it to a variable
 const app = express();
 
+//for this app to work i need middleware called BodyParser
+//so that i can pull things like POST requests from api.js
+
+//body parser needs to go first in the cycle of app.use()
+//bodyParser can accept many different types but I will be using
+//json data so we call that function on the bodyParser object
+app.use(bodyParser.json());
+
 //since routes are now imported, express has to "use" them
-//the first parameter is the path we want to have (if any) placed
-//before our routes
-app.use('/api', routes);
+//1st parameter is the path we want to have (if any) placed before our routes
+//the second paramater uses require to directly pass in the api.js
+app.use('/api', require('./routes/api'));
 
 
 //now that express is running, we should listen for requests
